@@ -119,7 +119,7 @@ public class CUE4ParseViewModel : ViewModel
                         WindowBorder = WindowBorder.Resizable,
                         Flags = ContextFlags.ForwardCompatible,
                         Profile = ContextProfile.Core,
-                        Vsync = VSyncMode.Adaptive,
+                        Vsync = VSyncMode.Disabled,
                         APIVersion = new Version(4, 6),
                         StartVisible = false,
                         StartFocused = false,
@@ -1318,4 +1318,5 @@ public class CUE4ParseViewModel : ViewModel
         return (a & b) == b;
     }
 }
+
 
