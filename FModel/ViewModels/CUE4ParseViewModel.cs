@@ -647,7 +647,9 @@ public class CUE4ParseViewModel : ViewModel
             case "code-workspace":
             case "projectstore":
             case "uefnproject":
-            case "uproject":
+            case "uproject":{
+                var archive = entry.CreateReader();
+                }
             case "manifest":
             case "uplugin":
             case "archive":
@@ -768,7 +770,9 @@ public class CUE4ParseViewModel : ViewModel
 
                 break;
             }
-            case "bnk":
+            case "bnk":{
+                var archive = entry.CreateReader();
+                }
             case "pck":
             {
                 var archive = entry.CreateReader();
@@ -818,7 +822,9 @@ public class CUE4ParseViewModel : ViewModel
             case "xvag":
             case "flac":
             case "at9":
-            case "wem":
+            case "wem":{
+                var archive = entry.CreateReader();
+                }
             case "wav":
             case "WAV":
             case "ogg":
@@ -1312,3 +1318,4 @@ public class CUE4ParseViewModel : ViewModel
         return (a & b) == b;
     }
 }
+
